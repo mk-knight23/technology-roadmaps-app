@@ -1,0 +1,4 @@
+.DS_Store
+.vibe/
+node_modules/
+*.log
