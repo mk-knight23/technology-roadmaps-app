@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tech-bg: #fafafa;
+}
+
+.dark {
+  --tech-bg: #050505;
+}
+
+body {
+  @apply bg-tech-bg text-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200 dark:border-slate-800/50;
+}
+
+.roadmap-line::before {
+  content: '';
+  @apply absolute left-4 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700;
+}
